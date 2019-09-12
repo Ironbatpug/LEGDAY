@@ -12,7 +12,33 @@
 		75C27ED4232ACB6200888DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C27ED2232ACB6200888DB6 /* Main.storyboard */; };
 		75C27ED6232ACB6300888DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C27ED5232ACB6300888DB6 /* Assets.xcassets */; };
 		75C27ED9232ACB6300888DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C27ED7232ACB6300888DB6 /* LaunchScreen.storyboard */; };
+		75C27EE7232ACFCF00888DB6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C27EE6232ACFCF00888DB6 /* IntentHandler.swift */; };
+		75C27EFD232ACFD000888DB6 /* IntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75C27EE4232ACFCF00888DB6 /* IntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75C27EFB232ACFD000888DB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75C27EC3232ACB6100888DB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C27EE3232ACFCF00888DB6;
+			remoteInfo = IntentHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75C27F04232ACFD000888DB6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75C27EFD232ACFD000888DB6 /* IntentHandler.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		75C27ECB232ACB6200888DB6 /* LEGDAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEGDAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,21 @@
 		75C27ED5232ACB6300888DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C27ED8232ACB6300888DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C27EDA232ACB6300888DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C27EE4232ACFCF00888DB6 /* IntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C27EE6232ACFCF00888DB6 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		75C27EE8232ACFCF00888DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C27EEF232ACFD000888DB6 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		75C27EC8232ACB6100888DB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C27EE1232ACFCF00888DB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				75C27ECD232ACB6200888DB6 /* LEGDAY */,
+				75C27EE5232ACFCF00888DB6 /* IntentHandler */,
+				75C27EEE232ACFD000888DB6 /* Frameworks */,
 				75C27ECC232ACB6200888DB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				75C27ECB232ACB6200888DB6 /* LEGDAY.app */,
+				75C27EE4232ACFCF00888DB6 /* IntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +104,23 @@
 			path = LEGDAY;
 			sourceTree = "<group>";
 		};
+		75C27EE5232ACFCF00888DB6 /* IntentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				75C27EE6232ACFCF00888DB6 /* IntentHandler.swift */,
+				75C27EE8232ACFCF00888DB6 /* Info.plist */,
+			);
+			path = IntentHandler;
+			sourceTree = "<group>";
+		};
+		75C27EEE232ACFD000888DB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75C27EEF232ACFD000888DB6 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +131,34 @@
 				75C27EC7232ACB6100888DB6 /* Sources */,
 				75C27EC8232ACB6100888DB6 /* Frameworks */,
 				75C27EC9232ACB6100888DB6 /* Resources */,
+				75C27F04232ACFD000888DB6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				75C27EFC232ACFD000888DB6 /* PBXTargetDependency */,
 			);
 			name = LEGDAY;
 			productName = LEGDAY;
 			productReference = 75C27ECB232ACB6200888DB6 /* LEGDAY.app */;
 			productType = "com.apple.product-type.application";
+		};
+		75C27EE3232ACFCF00888DB6 /* IntentHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C27F01232ACFD000888DB6 /* Build configuration list for PBXNativeTarget "IntentHandler" */;
+			buildPhases = (
+				75C27EE0232ACFCF00888DB6 /* Sources */,
+				75C27EE1232ACFCF00888DB6 /* Frameworks */,
+				75C27EE2232ACFCF00888DB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntentHandler;
+			productName = IntentHandler;
+			productReference = 75C27EE4232ACFCF00888DB6 /* IntentHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +171,9 @@
 				ORGANIZATIONNAME = "Molnár Csaba";
 				TargetAttributes = {
 					75C27ECA232ACB6100888DB6 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					75C27EE3232ACFCF00888DB6 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -113,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				75C27ECA232ACB6100888DB6 /* LEGDAY */,
+				75C27EE3232ACFCF00888DB6 /* IntentHandler */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +208,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75C27EE2232ACFCF00888DB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +227,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75C27EE0232ACFCF00888DB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C27EE7232ACFCF00888DB6 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75C27EFC232ACFD000888DB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C27EE3232ACFCF00888DB6 /* IntentHandler */;
+			targetProxy = 75C27EFB232ACFD000888DB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		75C27ED2232ACB6200888DB6 /* Main.storyboard */ = {
@@ -279,6 +382,7 @@
 		75C27EDE232ACB6300888DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LEGDAY/Info.plist;
@@ -296,6 +400,7 @@
 		75C27EDF232ACB6300888DB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LEGDAY/Info.plist;
@@ -305,6 +410,42 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Ironbatpug.LEGDAY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		75C27F02232ACFD000888DB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ironbatpug.LEGDAY.IntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75C27F03232ACFD000888DB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ironbatpug.LEGDAY.IntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,6 +468,15 @@
 			buildConfigurations = (
 				75C27EDE232ACB6300888DB6 /* Debug */,
 				75C27EDF232ACB6300888DB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75C27F01232ACFD000888DB6 /* Build configuration list for PBXNativeTarget "IntentHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C27F02232ACFD000888DB6 /* Debug */,
+				75C27F03232ACFD000888DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
